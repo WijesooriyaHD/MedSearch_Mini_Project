@@ -6,6 +6,7 @@ import UpdateDetails from './Pages/updateMedicine'
 
 import {Route,Routes , Link} from "react-router-dom"
 import ListMedicine from './Pages/listMedicine';
+import Searchfilter from './Pages/searchMedicine';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/updatedetails" element={ <UpdateDetails/> }/>
       
       <Route path="/home" element={ <Home /> }/>
+      <Route path="/searchMedicine" element={ <Searchfilter/> }/>
     
       </Routes>
 

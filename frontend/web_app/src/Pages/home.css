@@ -1,5 +1,5 @@
 body{
-
+    background-image:linear-gradient(rgba(212, 227, 217, 0.7),#beedf2), url(../Assets/medicine.jpg);
     background-color: azure;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@ body{
 
 .btn-a{
 
-    background-color:bisque;
+    background-color:rgb(46, 234, 234);
     font-size:larger;
     font-weight: bold;
     border-radius: 0.3cm;

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import './home.css'
 import Typist from 'react-typist';
-import doc from '../Assets/doc14.webp'
-import doc2 from '../Assets/doc15.webp'
+import doc from '../Assets/doc12.webp'
+import img2 from '../Assets/img2.png'
 import styled, { keyframes, ThemeProvider } from 'styled-components'
 
 const float = keyframes`
@@ -45,7 +45,7 @@ class Home extends Component {
   
                 <h1 className='topic'>
 
-                <font face ="Algerian" >
+                <font face ="Fantacy" >
                 Welcome to  <br></br>MediSearch</font></h1>
 
 
@@ -54,16 +54,16 @@ class Home extends Component {
             <img src={doc} alt="doc1" />
                 </Doc>    
                 <Doc2>
-            <img src={doc2} alt="doc2" />
+            <img src={img2} alt="doc2" />
                 </Doc2> 
             </div>
 
             <div className='button2'>
-            <Link to="/listmedicines"><button type="button" className="btn-c"><font face ="Comic sans MS" >Admin</font>
+            <Link to="/listmedicines"><button type="button" className="btn-c"><font face ="Comic sans MS" >Phamacy Owner</font>
             </button></Link>
             </div>
             <div className='button4'>
-            <Link to="/"><button type="button" className="btn-a"><font face ="Comic sans MS" > Customer</font>
+            <Link to="/searchMedicine"><button type="button" className="btn-a"><font face ="Comic sans MS" > Customer</font>
             </button></Link>
             </div>
             
