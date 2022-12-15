@@ -25,7 +25,7 @@ const[data,setData]=useState([]);
       
        
        const loadUserData=async()=>{
-          return await axios.get("http://localhost:8080/api/v1/medicines/available")
+          return await axios.get("http://localhost:8080/api/medicines/available")
           .then((response)=>{
             setData(response.data)
             setSearchApiData(response.data)})
