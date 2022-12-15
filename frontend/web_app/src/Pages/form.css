@@ -1,0 +1,80 @@
+body{
+
+
+    background-color: azure;
+    background-size: cover;
+    background-position: center;
+   
+    display: fixed;
+}
+
+
+.content{
+    
+    height: 650px;
+    width: 480px;
+    
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    
+  
+
+}
+
+
+.form-label{
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.btn btn-info{
+    font-weight:bold;
+    display: inline-block;
+    padding: 2px 2px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline:blue;
+    color:black;
+    font-weight: bold;
+    background-color:transparent;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 9px #999;
+  
+}
+
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    border-radius: 12%;
+    color: black;
+    background: transparent;
+    font-size: 15px;
+
+}
+
+.col-md-4{
+    color:rgb(58, 13, 13)
+}
+
+
+.form-control{
+    color: rgb(40, 198, 238);
+}
+
+.placeholder{
+    color: rgb(238, 40, 40);
+}
