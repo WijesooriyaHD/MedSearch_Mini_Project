@@ -71,6 +71,15 @@ public class MedicineController {
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
     }
+    
+    
+    //To get all available medicine items
+    //Available list
+    @GetMapping("/medicines/available")
+    public List<Medicine> allAvailable() {
+
+        return medicineRepository.findByAvilability();
+    }
 
 
 }
