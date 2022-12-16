@@ -1,1 +1,1 @@
-# MedSearch_Mini_Project
+# MediSearch_Mini_Project
