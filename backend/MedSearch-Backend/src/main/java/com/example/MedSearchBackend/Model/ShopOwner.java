@@ -11,7 +11,7 @@ public class ShopOwner {
     @Id
     private String idNo;
 
-    @Column(name="passowrd")
+    @Column(name="owner_password")
     private String password;
 
     public String getIdNo() {

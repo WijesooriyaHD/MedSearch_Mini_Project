@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 public interface ShopOwnerRepository extends JpaRepository<ShopOwner,String> {
 
     // find a shop onwner by id no and password
-    @Query(value = "SELECT * FROM pharmacy_owner WHERE id_no =?1 AND password=?2",nativeQuery = true)
+    @Query(value = "SELECT * FROM pharmacy_owner WHERE id_no =?1 AND owner_password=?2",nativeQuery = true)
     ShopOwner findByIdAndPassword(String idNo, String Password);
 
 }
