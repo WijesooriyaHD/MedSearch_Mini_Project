@@ -27,6 +27,14 @@ public class ShopOwnerController {
     }
 
     // get shopOwner by id and password
+    @GetMapping("/shopowners/{idNo}/{password}")
+    public  ResponseEntity<ShopOwner> getShopOwnerByIdAndPassword(@PathVariable String idNo, @PathVariable String password){
+
+        ShopOwner shopowner =shopOwnerRepository.findByIdAndPassword(idNo,password);
+        return ResponseEntity.ok(shopowner);
+
+    }
+
 
 
 }
