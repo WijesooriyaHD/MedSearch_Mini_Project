@@ -59,7 +59,7 @@ class Home extends Component {
             </div>
 
             <div className='button2'>
-            <Link to="/listmedicines"><button type="button" className="btn-c"><font face ="Comic sans MS" >Phamacy Owner</font>
+            <Link to="/login"><button type="button" className="btn-c"><font face ="Comic sans MS" >Phamacy Owner</font>
             </button></Link>
             </div>
             <div className='button4'>
