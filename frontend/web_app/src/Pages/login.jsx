@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { userLogin } from '../redux/apicalls';
+import { UserLogin } from '../redux/apicalls';
 import { login } from '../redux/userSlice';
+import axios from "axios";
 
 import './login.css'
 
@@ -11,6 +12,18 @@ const Login =() =>{
     const [idNo,setIdNo]=useState("");
     const [password,setPassword]=useState("");
     const isloggedin=false;
+
+    const[data,setData]=useState([]);
+ //const[value,setValue]=useState([]);
+ useEffect(()=>{
+  loadUserData();
+ },[]);
+
+ const loadUserData=async()=>{
+    return await axios.get("http://localhost:8080/api/shopowners").then((response)=>setData(response.data)).catch((err)=>console.log(err));
+ };
+
+ console.log("data",data);
 
 
     const navigate = useNavigate();
@@ -32,7 +45,6 @@ const Login =() =>{
         /*dispatch(login({
             idNo:idNo,
             password:password,
-
         }));
         */
 
@@ -44,9 +56,37 @@ const Login =() =>{
 
         console.log(user1);
 
-        userLogin({idNo,password,isloggedin},dispatch);
+        
+ 
+ 
+ const payload=data.find(item=>item.idNo===idNo && item.password ===password)
+        if(payload){
 
-        handleNavigate(user1.isloggedin);
+            
+
+           
+            
+            dispatch(login({
+                idNo:idNo,
+                password:password,
+                isloggedin:true,
+            }));
+        
+            UserLogin({idNo,password,isloggedin},dispatch);
+           
+           
+            
+        }
+        else{
+            alert('Incorrect ID or Password')
+        }
+     
+
+
+
+handleNavigate(user1.isloggedin);
+
+
     
 
     }
@@ -76,7 +116,7 @@ const Login =() =>{
     return (
 
         <div className="login">
-            <form className="login_form" onSubmit={(e)=>handleSubmit(e)}>
+            <form className="login_form" >
                 <h1>Login Here 🚪</h1>
                 <input 
                 type="idNo" placeholder='Id No'
@@ -86,7 +126,7 @@ const Login =() =>{
                 type="password" placeholder='Password'
                 onChange={(e)=>setPassword(e.target.value)}></input>
 
-                <button type='submit' className='submit_btn'>Submit</button>
+                <button type='submit' className='submit_btn' onClick={(e)=>handleSubmit(e)}>Login</button>
 
             </form>
 
